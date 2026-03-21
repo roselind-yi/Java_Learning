@@ -1,0 +1,13 @@
+1.数组未初始化就赋值
+int[] arr;
+arr[0]=10;//报错，没有分配
+
+2.把数组当普通变量赋值
+int[]=arr;
+arr=new int[5];
+arr=30;//error!
+
+3.索引越界
+int[5]arr;
+arr=new int[5];
+arr[5]=60;//error!
