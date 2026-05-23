@@ -1,0 +1,7 @@
+- 使用关键字transient修饰对象的成员, 该成员不参数序列化
+
+- 不参与序列化的成员，就不会被反序列化出来，反序列化后值是null
+
+// 瞬时化修饰符
+
+private transient String school;

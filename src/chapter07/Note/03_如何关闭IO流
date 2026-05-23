@@ -1,0 +1,59 @@
+传统的关闭流的写法
+
+- 用close()方法关闭流
+
+- close()方法不能写在try中，
+如果close()前面发送了异常会直接进入catch，
+导致close()执行不到
+
+- close()方法可以写在finally块中，
+需要提升流的变量的作用域，
+使变量对finally可见
+
+- close()方法本身也需要捕捉异常，
+还需要对指针进行判空
+
+// 1. 把变量is定义到try的外面 【提升变量的作用域】
+InputStream is = null;
+try {
+    // 在try里面创建流
+    is = new FileInputStream("D:/hello.txt");
+    // 使用流
+
+} catch (FileNotFoundException e) {
+    throw new RuntimeException(e);
+} catch (IOException e) {
+    throw new RuntimeException(e);
+} finally {
+   // 在finally中关闭流
+   // 防止空指针异常,先对流进行判空
+   if (is != null) {
+       try {
+           is.close();
+           System.out.println("流关闭成功");
+       } catch (IOException e) {
+           System.out.println("流关闭失败");
+       }
+   }
+}
+
+【新式的语法（try-with-resource）】
+public static void main(String[] args) {
+    // 新式try-catch语法
+    // try后面跟小括号和大括号
+    // 小括号里面编写创建系统资源【流】的代码
+    // 大括号里面编写使用的代码
+    // 这种语法, 流用完后会自动关闭, 不需要手动close()关闭
+    // 结尾不需要finally
+    try (
+        // 小括号里面创建流
+        InputStream is = new FileInputStream("D:/hello.txt");
+    ) {
+        // 大括号里面使用流
+
+    } catch (FileNotFoundException e) {
+        throw new RuntimeException(e);
+    } catch (IOException e) {
+        throw new RuntimeException(e);
+    }
+}

@@ -1,0 +1,26 @@
+【多态特性】
+一句话解释多态
+【继承】是多态的前置条件
+
+Java允许用父类定义引用，指向任意子类对象。
+调用方法时，优先调用子类重写的方法。
+
+【应用场景一】：用父类作为【数组】的数据类型
+Pet[] arr=new Pet[5];      支持多态类型的数组
+Dog[] dogs= new Dog[5];    支持单态类型的数组
+Cat[] cats= new Cat[5];    支持单态类型的数组
+
+【应用场景二】：用父类作为【形参】的数据类型
+static void foo(Dog pet){pet.show();} 单态的形参
+static void foo(Cat pet){pet.show();} 单态的形参
+static void foo(Pet pet){pet.show();} 多态的形参
+
+【应用场景三】：用父类作为【返回值】的数据类型
+static Dog get() {...};单态的返回类型
+static Cat get() {...};单态的返回类型
+static Pet get() {...};多态的返回类型
+
+【其他应用场景】的数据类型
+局部变量的数据类型
+成员变量
+以及任意需要用到数据类型的地方

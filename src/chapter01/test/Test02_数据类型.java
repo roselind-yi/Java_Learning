@@ -18,7 +18,7 @@ public class Test02_数据类型 {
         double f = 3.141592617382467412;//双精度浮点数（8个字节）
         System.out.println(f);//最大精度15-16位
 
-        //第三类：布尔Boolean类型（true,false）-》一个字节
+        //第三类：布尔Boolean类型（取值范围：true,false）-》一个字节
         boolean h =true;
         boolean z =false;
 

@@ -1,0 +1,15 @@
+【向上的问题】
+必须有继承关系
+Pet pet=new Dog();   √
+Pet pet=new Cat();   √
+Dog dog=new Cat();   ×
+
+【向下的问题】
+Pet pet=new Dog();允许向上
+Cat cat=(Cat)pet;允许向下，【仅编译时允许】【运行时报错】
+
+【类型转换异常】Dog不能转换为Cat
+.ClassCastException: chapter04.Dog cannot be cast to chapter04.Cat
+
+为了避免发生该异常，向下转型前要先用【instanceof】做原型判断
+

@@ -1,0 +1,11 @@
+- 传输双方的类必须实现序列化接口implements Serializable
+public class User implements Serializable {
+
+}
+
+- 传输双方的类必须提供相同的序列化版本号
+  - 版本号必须用8个字节的long类型
+  - 版本号的值是什么无所谓，但是双方版本必须一致
+private static final long serialVersionUID = 7584876957486758L;
+
+- 传输双方的包名和类名必须一致

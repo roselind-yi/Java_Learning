@@ -1,0 +1,10 @@
+- TCP套接字
+  - 服务端用ServerSocket类
+  - 客户端用Socket类
+  - 创建客户端套接字时会连接与服务端的连接
+  - 可以通过套接字获取IO流。基于IO流实现数据传输。
+
+- UDP套接字
+  - 客户端和服务端用的是同一个类DatagramSocket
+  - 创建客户端套接字时，不建立连接
+  - 不基于IO流，基于DatagramPackage收发数据包

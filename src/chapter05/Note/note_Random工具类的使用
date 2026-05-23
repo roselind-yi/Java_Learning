@@ -1,0 +1,13 @@
+常用的工具类都来自于java.util包,需要导包
+import java.util.Random
+
+第一步【创建对象】
+Random random =new Random();
+       ------(虚线处为引用名，可以自定义)
+
+第二步【调用方法】
+        //特定要求：随机返回一个四位数
+        int e=random.nextInt(9000)+1000;
+        System.out.println(e);
+
+

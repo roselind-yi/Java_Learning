@@ -1,0 +1,11 @@
+- 字节输入流的父类：InputStream
+  - 常用子类是FileInputStream
+
+- 字节输出流的父类：OutputStream
+  - 常用子类FileOutputStream
+
+- 字符输入流的父类：Reader
+  - 常用子类FileReader、BufferedReader
+
+- 字符输出流的父类：Writer
+  - 常用子类FileWriter、BufferedWriter
