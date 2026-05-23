@@ -1,0 +1,16 @@
+不应该用基本类型（8个）作为成员变量的类型，他们没有null值。
+byte\short\int\long 默认值为0
+float\double 默认值为0.0
+boolean 默认值false
+char 默认值是 '\u0000'(编码表的0号字符)
+
+基本类型值适用于局部变量，不适合做成员变量
+基本类型          包装过的类型（默认值是null）
+byte              Byte
+short             Short
+int             Integer
+long              Long
+float             Float
+double            Double
+boolean           Boolean
+char              Character
