@@ -1,11 +1,13 @@
 package chapter09;
 
 public class Test01 {
-    //主函数就是主线程
-    //进程process，线程Thread
-    //程序运行，启动一个Java进程
-    //主函数：他是Java进程中的第一个线程【主线程，不需要我们创建】
-    //子线程可以开启N个，【需要我们创建】
+    /*
+    主函数就是主线程
+    进程process，线程Thread
+    程序运行，启动一个Java进程
+    主函数：他是Java进程中的第一个线程【主线程，不需要我们创建】
+    子线程可以开启N个，【需要我们创建】
+    */
     public static void main(String[] args) {
         //子线程不可用独立运行，必须通过主函数创建运行
         CountThread ct1=new CountThread();
